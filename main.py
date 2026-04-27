@@ -111,3 +111,65 @@ while True:
 
     else:
         print("⚠️ 잘못된 번호입니다. 다시 선택해 주세요.")
+
+
+
+2차과제
+print('='*50)
+print(' [스마트 금융 시스템: 신용등급 찬독기] ')
+print('='*50)
+
+customer_basic_data = []
+prompts = ['고객님의 성함을 입력하세요:' , ' 현재  연봉을 입력허세요'(단위: 만원): ', '보유 부체를 입력하세요(단위: 만원): ']
+
+for i in range(len(prompts)):
+    data = input(prompts[i])
+    customer_basic_data.append(data)
+
+name = customer_basic_data[0]
+salery = float(customer_basicdata[1])
+debt = float(customer_basic_data[2])
+overdue_count = int(input('지난해 연체 횟수를 입력하시오: ')
+base_score = 500.0
+
+total_score = base_score
+total_score += (salary * 0.1)
+total_score -= (debt * 0.05)
+total_score -= (overdue_count * 50)
+
+score_analysis = [salary, debt, total_score]
+score_analysis.insert(0, 100.0)
+data_len = len(socre_analysis)
+max_value = max(score_analyiss)
+socre_analysis.sort(reverse = True)
+print('\n' + '-'*20 + '판독결과' + '-'*20)
+
+if total_score >= 900:
+    grade = '1등급 (우량)'
+    if slary >= 10000 and overdue_cont == 0:
+        title = 'vvip마스터'
+        benefit = '특별한도 상향 및 전담 매니저배치')
+    else:
+        title = '일반 우량 고객'
+        benefit = '대출 금리 인하 혜택'
+elif total_score >= 600:
+    grade = '3등급(보통)'
+else:
+    grade = '5등급 (주의)'
+    title = '성실 상황 고객'
+    benefit = '대출 금리 인하 혜택'
+else:
+    grade = '5등급'
+    title = '관리 대상 고객')
+    benefit = '금융 교육 이수 권고'
+
+print(f'고객성함: {name}')
+print(f' 산출점슈: {total_score: .2f}점')
+print(f' 신용등급: {grade}')
+print(f' 부여칭호: [{title}]')
+print(f' 특별혜택: {benefit}')
+
+print('-'*50*)
+print(f'시스템 로그: 데이터 {data_lenn}개 처리 완료 / 최고 수치 -: {max_vlaue}')
+print('='*50)
+
